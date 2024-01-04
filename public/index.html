@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Metadatos | Metadata-->
+    <meta charset="utf-8" />
+    <meta name="author" content="SiegBoss" />
+    <meta name="description" content="Portafolio de SiegBoss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Titulo | Title-->
+    <title>Login /  Register</title>
+    <!--Icono | Icon-->
+    <link rel="icon" type="image/x-icon" href="images/logo_willy.png" />
+    <!-- Enlazar a Bootstrap | Link to Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!--Enklazar CSS Estilo | Link CSS Style-->
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <!--Tipografias | Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="conteiner-login-register">
+
+        <div class="login-register">
+
+            <div class="login">
+                <h2>Inicia Sesión</h2>
+                <form>
+                    <input type="text" name="username" placeholder="Usuario"><br>
+                    <input type="password" name="password" placeholder="Contraseña"><br>
+                    <input class="button-login" type="submit" value="Inicia Sesión">
+                </form>
+            </div>
+
+            <div class="register">
+                <h2>Registrarse</h2>
+                <form>
+                    <input type="text" name="username" placeholder="Usuario"><br>
+                    <input type="password" name="password" placeholder="Contraseña"><br>
+                    <input type="text" name="email" placeholder="Email"><br>
+                    <input class="button-register" type="submit" value="Registrate">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button id="regster">Registrarse</button>
+        <button id="login">Login</button>
+        
+    </div>
+
+    <!--Enlazar html con JS | Link html with JS-->
+    <script src="./index.js"></script>
+    <!--Enlazar a Bootstrap | Link to Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
