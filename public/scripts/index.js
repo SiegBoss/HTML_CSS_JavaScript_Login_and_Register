@@ -1,8 +1,11 @@
-// Elementos necesarios
-const buttonRegister = document.getElementById('regster');
+const buttonRegister = document.getElementById('register');
 const buttonLogin = document.getElementById("login");
+
 const buttonRegisterUser = document.getElementById("register-user");
+const buttonLoginUser = document.getElementById("login-user");
+
 const form = document.querySelector(".login-register");
+
 
 buttonRegister.addEventListener("click", function () {
 
@@ -28,11 +31,12 @@ buttonRegisterUser.addEventListener('click', async () => {
 
     const data = {
 
-        username: document.getElementById('username').value,
-        password: document.getElementById('password').value,
-        email: document.getElementById('email').value,
+        username: document.getElementById('register-username').value,
+        password: document.getElementById('register-password').value,
+        email: document.getElementById('register-email').value,
 
     };
+
     const options = {
 
         method: 'POST',     
@@ -42,12 +46,47 @@ buttonRegisterUser.addEventListener('click', async () => {
 
     try {
 
-        const response = await fetch('/addData', options);
+        const response = await fetch('/register', options);
         const json = await response.json();
         console.log(json);
 
     } catch (error) {
 
+        console.error('Error:', error);
+    }
+});
+
+
+buttonLoginUser.addEventListener('click', async () => {
+
+    const loginData = {
+        username: document.getElementById('login-username').value,
+        password: document.getElementById('login-password').value,
+    };
+
+    const loginOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(loginData),
+    };
+
+    try {
+
+        const loginResponse = await fetch('/login', loginOptions);
+        const loginJson = await loginResponse.json();
+
+        console.log(loginJson);
+
+        if (loginResponse.ok) {
+
+            console.log(loginData.message);
+
+        } else {
+
+            console.error(loginData.message);
+
+        }
+    } catch (error) {
         console.error('Error:', error);
     }
 });
