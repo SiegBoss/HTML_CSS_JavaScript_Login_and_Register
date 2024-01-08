@@ -1,0 +1,180 @@
+/*Estilo Genereales | General Styles*/
+body {
+    background-color: #222034;
+    background-image: url('../assets/stars.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+
+/*Estilos del Sol, Planetas y Asteroides | Styles of the Sun, Planets and Asteroids*/
+#sun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+}
+
+#sun img {
+    width: 100%;
+    height: auto;
+}
+
+#mercury {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    animation: rotation 2.5s infinite linear;
+}
+
+#mercury img {
+    width: 10px;
+    height: 10px;
+    animation: counterRotation 2.5s infinite linear;
+}
+
+#venus {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    animation: rotation 6.5s infinite linear;
+    
+}
+
+#venus img {
+    width: 15px;
+    height: 15px;
+    animation: counterRotation 6.5s infinite linear;
+}
+
+#earth {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    animation: rotation 10s infinite linear;
+}
+
+#earth img {
+    width: 20px;
+    height: 20px;
+    animation: counterRotation 10s infinite linear;
+}
+
+#mars {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    animation: rotation 18.8s infinite linear;
+}
+
+#mars img {
+    width: 15px;
+    height: 15px;
+    animation: counterRotation 18.8s infinite linear;
+}
+
+#asteroids {
+    position: absolute;
+    width: 440px;
+    height: 440px;
+}
+
+#asteroids img {
+    width: 100%;
+    height: auto;
+    animation: counterRotation2 260s infinite linear;
+}
+
+#jupiter {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    animation: rotation 118.7s infinite linear;
+}
+
+#jupiter img {
+    width: 30px;
+    height: 30px;
+    animation: counterRotation 118.7s infinite linear;
+}
+
+#saturn {
+    position: absolute;
+    width: 410px;
+    height: 410px;
+    animation: rotation 294.8s infinite linear;
+}
+
+#saturn img {
+    width: 40px;
+    height: 25px;
+    animation: counterRotation 294.8s infinite linear;
+}
+
+#uranus {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    animation: rotation 840.4s infinite linear;
+}
+
+#uranus img {
+    width: 20px;
+    height: 20px;
+    animation: counterRotation 840.4s infinite linear;
+}
+
+#neptune {
+    position: absolute;
+    width: 510px;
+    height: 510px;
+    animation: rotation 45.2s infinite linear;
+}
+
+#neptune img {
+    width: 17.5px;
+    height: 17.5px;
+    animation: counterRotation 45.2s infinite linear;
+}
+
+
+/*Animaciones | Animations*/
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counterRotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes counterRotation2 {
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}

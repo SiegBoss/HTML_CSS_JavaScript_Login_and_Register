@@ -6,6 +6,8 @@ const buttonLoginUser = document.getElementById("login-user");
 
 const form = document.querySelector(".login-register");
 
+const errorMessage = document.getElementById('error-message');
+
 
 buttonRegister.addEventListener("click", function () {
 
@@ -27,18 +29,21 @@ window.onload = function() {
 
 };
 
-buttonRegisterUser.addEventListener('click', async () => {
+// Obtén el formulario de registro
+const registerForm = document.getElementById('register-form');
+
+// Agrega un detector de eventos 'submit' al formulario de registro
+registerForm.addEventListener('submit', async (event) => {
+    // Previene el envío de formulario predeterminado
+    event.preventDefault();
 
     const data = {
-
         username: document.getElementById('register-username').value,
         password: document.getElementById('register-password').value,
         email: document.getElementById('register-email').value,
-
     };
 
     const options = {
-
         method: 'POST',     
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -47,46 +52,52 @@ buttonRegisterUser.addEventListener('click', async () => {
     try {
 
         const response = await fetch('/register', options);
+
+        if (!response.ok) {
+
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const json = await response.json();
         console.log(json);
-
+        
     } catch (error) {
-
         console.error('Error:', error);
     }
 });
 
+const loginForm = document.getElementById('login-form');
 
-buttonLoginUser.addEventListener('click', async () => {
+loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    const loginData = {
+    const data = {
         username: document.getElementById('login-username').value,
         password: document.getElementById('login-password').value,
     };
 
-    const loginOptions = {
+    const options = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(loginData),
+        body: JSON.stringify(data),
     };
 
     try {
+        const response = await fetch('/login', options);
 
-        const loginResponse = await fetch('/login', loginOptions);
-        const loginJson = await loginResponse.json();
+        if (!response.ok) {
 
-        console.log(loginJson);
-
-        if (loginResponse.ok) {
-
-            console.log(loginData.message);
-
-        } else {
-
-            console.error(loginData.message);
-
+            const errorData = await response.json();
+            errorMessage.textContent = errorData.error;
+            throw new Error(`HTTP error! status: ${response.status}`);
+            
         }
+
+        // Redirige al usuario a otra página
+        window.location.href = '../pages/solar_system.html';
+
     } catch (error) {
         console.error('Error:', error);
     }
 });
+

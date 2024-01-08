@@ -58,39 +58,27 @@ db.once('open', function () {
     app.post('/login', async (req, res) => {
 
         const { username, password } = req.body;
+        const user = await collection.findOne({ username });
     
-        try {
+        if (!user) {
 
-            const user = await collection.findOne({ username });
-    
-            if (user) {
-
-                const isPasswordValid = await bcrypt.compare(password, user.password);
-    
-                if (isPasswordValid) {
-
-                    res.status(200).send('Inicio de sesión exitoso');
-                    console.log("Inicio de sesión exitoso");
-
-                } else {
-
-                    res.status(401).send('Credenciales inválidas');
-                    console.log("Credenciales inválidas");
-                }
-
-            } else {
-                
-                res.status(404).send('Usuario no encontrado');
-                console.log("Usuario no encontrado");
-
-            }
-            
-        } catch (error) {
-            
-            console.error(error);
-            res.status(500).send('Error en el servidor');
+            console.log('Usuario no encontrado');
+            return res.status(400).json({ error: 'Usuario no encontrado' });
         }
+    
+        const match = await bcrypt.compare(password, user.password);
+    
+        if (!match) {
+
+            console.log('Contraseña incorrecta');
+            return res.status(400).json({ error: 'Contraseña incorrecta' });
+
+        }
+        
+        console.log('Inicio de sesión exitoso');
+        res.status(200).send('Inicio de sesión exitoso');
     });
+
 });
 
 
