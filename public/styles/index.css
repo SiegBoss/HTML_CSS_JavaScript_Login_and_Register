@@ -1,9 +1,31 @@
+/* Estilos Generales | General Styles */
 body {
     height: 100%;
     background-image: radial-gradient(#59bec9 1px, #eff1f3 1px);
     background-size: 20px 20px;
 }
 
+form input {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: #3c3c3c;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #087e8b;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Estilo de login y register | Login and register style */
 .conteiner-login-register {
     margin: auto;
     margin-top: 5%;
@@ -51,16 +73,6 @@ body {
     transform: rotateY(180deg);
 }
 
-form input {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: white;
-    color: #3c3c3c;
-    outline: none;
-}
-
 .button-login,
 .button-register {
     background-color: #ff5a5f;
@@ -72,15 +84,6 @@ form input {
     margin: auto;
     justify-content: space-around;
     margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #087e8b;
-    color: white;
-    cursor: pointer;
 }
 
 .error{
