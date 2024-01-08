@@ -1,8 +1,9 @@
 /* Estilos Generales | General Styles */
 body {
     height: 100%;
-    background-image: radial-gradient(#59bec9 1px, #eff1f3 1px);
     background-size: 20px 20px;
+    margin: 0;
+    background-image: radial-gradient(#59bec9 1px, #eff1f3 1px);
 }
 
 form input {
@@ -10,27 +11,27 @@ form input {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
+    outline: none;
     background-color: white;
     color: #3c3c3c;
-    outline: none;
 }
 
 button {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
     background-color: #087e8b;
     color: white;
-    cursor: pointer;
 }
 
 
 /* Estilo de login y register | Login and register style */
-.conteiner-login-register {
+.container-login-register {
     margin: auto;
     margin-top: 5%;
-    height: 450px;
-    width: 500px;
+    max-width: 500px; 
+    width: 90%;
     perspective: 1000px;
     overflow: hidden;
 }
@@ -39,7 +40,8 @@ button {
     position: relative;
     margin: auto;
     margin-top: 10%;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     height: 350px;
     text-align: center;
     transition: transform 1s;
@@ -96,6 +98,75 @@ button {
 .error p{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    color: red;
     text-align: center;
+    color: red;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container-login-register {
+        margin-top: 10%;
+    }
+
+    .login-register {
+        margin-top: 15%;
+    }
+}
+
+
+
+/*Pie de pagina | Footer*/
+.dark-section {
+    color: #f5f6f7;
+    background-color: #1b1b32;
+}
+
+footer {
+    min-height: 400px;
+}
+
+.footer-page {
+    margin-top: 200px;
+}
+
+.footer-icon {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+.footer-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.social-media-icons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    border: 2px solid white;
+}
+
+.social-media-icons i {
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+
+.social-media-icons a:hover i {
+    color: black;
+}
+
+.Copyright {
+    font-size: 15px;
+    padding: 20px;
+    color: #aeaeae;
 }
