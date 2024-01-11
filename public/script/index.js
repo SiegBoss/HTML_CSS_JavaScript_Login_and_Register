@@ -117,7 +117,7 @@ loginForm.addEventListener('submit', async (event) => {
         }
 
         // Redirige al usuario a otra página
-        window.location.href = '../pages/solar_system.html';
+        window.location.href = '../pages/solar_system/solar_system.html';
 
     } catch (error) {
         console.error('Error:', error);
