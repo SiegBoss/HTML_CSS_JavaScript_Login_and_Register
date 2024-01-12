@@ -29,14 +29,6 @@ buttonLogin.addEventListener("click", function () {
     buttonRegister.style.display = "block";
 });
 
-// Window.onload : Se ejecuta cuando la página se ha cargado | Executes when the page has loaded
-window.onload = function() {
-
-    // Ocultar el boton de inicio de sesión | Hide the login button
-    document.getElementById("login").style.display = "none";
-
-};
-
 
 // addEventListener() : Ejecuta una función cuando se envía el formulario | Executes a function when the form is submitted
 registerForm.addEventListener('submit', async (event) => {
