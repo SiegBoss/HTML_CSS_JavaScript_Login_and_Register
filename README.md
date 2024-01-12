@@ -1,6 +1,7 @@
 # Sistema de Inicio de Sesión y Registro con Node.js, Express y MongoDB
 
 Este proyecto es un sistema de inicio de sesión y registro que permite a los usuarios realizar algunas operaciones (Registro e Inicio de Sesión) a través de una interfaz web.
+
 La parte del frontend está desarrollada con HTML, CSS y JavaScript, mientras que la lógica del backend se ha implementado utilizando Node.js, Express y Mongoose para interactuar con una base de datos MongoDB. Además, se encripta la contraseña para una mayor seguridad y se comprueba si el usuario existe y si la contraseña es correcta.
 
 

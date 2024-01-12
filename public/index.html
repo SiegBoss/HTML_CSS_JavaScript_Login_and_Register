@@ -21,56 +21,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+    <!---------------------------->
+    <section>
+        <!-- Contendor de Login y Register | Login and Register Container -->
+        <div class="conteiner-login-register">
 
-    <!-- Contendor de Login y Register | Login and Register Container -->
-    <div class="conteiner-login-register">
+            <!-- Contenedor de Login y Register | Login and Register Container -->
+            <div class="login-register">
 
-        <!-- Contenedor de Login y Register | Login and Register Container -->
-        <div class="login-register">
+                <!-- Contenedor de Login | Login Container -->
+                <div class="login">
+                    <h2>Iniciar Sesión</h2>
+                    <!-- Formulario de Login | Login Form -->
+                    <form id="login-form">
+                        <input id="login-username" type="text" name="username" placeholder="Usuario" required><br>
+                        <input id="login-password" type="password" name="password" placeholder="Contraseña"
+                            required><br>
+                        <!-- Boton de Iniciar Sesión | Login Button -->
+                        <input id="login-user" class="button-login" type="submit" value="Iniciar Sesión"><br>
 
-            <!-- Contenedor de Login | Login Container -->
-            <div class="login">
-                <h2>Iniciar Sesión</h2>
-                <!-- Formulario de Login | Login Form -->
-                <form id="login-form">
-                    <input id="login-username" type="text" name="username" placeholder="Usuario" required><br>
-                    <input id="login-password" type="password" name="password" placeholder="Contraseña" required><br>
-                    <!-- Boton de Iniciar Sesión | Login Button -->
-                    <input id="login-user" class="button-login" type="submit" value="Iniciar Sesión"><br>
+                    </form>
+                </div>
 
-                </form>
+                <!-- Contenedor de Register | Register Container -->
+                <div class="register">
+                    <h2>Registrarse</h2>
+                    <!-- Formulario de Register | Register Form -->
+                    <form id="register-form">
+                        <input id="register-username" type="text" name="username" placeholder="Usuario" required><br>
+                        <input id="register-password" type="password" name="password" placeholder="Contraseña"
+                            required><br>
+                        <input id="register-email" type="text" name="email" placeholder="Email" required><br>
+                        <!-- Boton de Registrarse | Register Button -->
+                        <input id="register-user" class="button-register" type="submit" value="Registrarse">
+                    </form>
+                </div>
             </div>
 
-            <!-- Contenedor de Register | Register Container -->
-            <div class="register">
-                <h2>Registrarse</h2>
-                <!-- Formulario de Register | Register Form -->
-                <form id="register-form">
-                    <input id="register-username" type="text" name="username" placeholder="Usuario" required><br>
-                    <input id="register-password" type="password" name="password" placeholder="Contraseña" required><br>
-                    <input id="register-email" type="text" name="email" placeholder="Email" required><br>
-                    <!-- Boton de Registrarse | Register Button -->
-                    <input id="register-user" class="button-register" type="submit" value="Registrarse">
-                </form>
+            <!-- Contenedor de Error | Error Container -->
+            <div class="error">
+                <!-- Mensaje de Error | Error Message -->
+                <p id="error-message"></p>
             </div>
-
         </div>
-        <!-- Contenedor de Error | Error Container -->
-        <div class="error">
-            <!-- Mensaje de Error | Error Message -->
-            <p id="error-message"></p>
-        </div>
-    </div>
-    <!-- Contenedor de Botones | Buttons Container -->
-    <div class="buttons">
-        <button id="register">Registrarse</button>
-        <button id="login">Iniciar Sesión</button>
-    </div>
 
+        <!-- Contenedor de Botones | Buttons Container -->
+        <div class="buttons">
+            <button id="register">Registrarse</button>
+            <button id="login">Iniciar Sesión</button>
+        </div>
+
+    </section>
+    <!---------------------------->
+
+
+    <!---------------------------->
     <!--Pie de Pagina | Footer-->
     <footer id="contacto" class="d-flex flex-column align-items-center justify-content-center">
         <img class="footer_icon" src="./images/logo_willy.png" alt="Logo de la Pagina">
@@ -94,6 +102,7 @@
             creado por SiegBoss &#169; 2024
         </div>
     </footer>
+    <!---------------------------->
 
     <!--Enlazar html con JS | Link html with JS-->
     <script src="./script/index.js"></script>
