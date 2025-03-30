@@ -1,13 +1,14 @@
 /* 
-  Modifica los estilos generales para login y registro incluyendo 
-  soporte para modo claro y oscuro, botones, formularios, y campos de contraseña.
+  Estilos generales para login y registro 
+  Soporte para modo claro y oscuro, botones, formularios, y campos de contraseña
 
-
-  Modifies general styles for login and register including support 
-  for light/dark mode, buttons, forms, and password fields.
+  Stiles for login and register
+  Support for light and dark mode, buttons, forms, and password fields
 */
 
-/* Variables para modo claro y oscuro | Variables for light and dark mode */
+/* ------------------------- */
+/* VARIABLES DE COLOR | COLOR VARIABLES */
+/* Modo claro | Light mode */
 :root {
   --bg: #f2f2f2;
   --text: #1e1e1e;
@@ -20,6 +21,7 @@
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
+/* Modo oscuro | Dark mode */
 body.dark {
   --bg: #1e1e2f;
   --text: #f5f5f5;
@@ -29,7 +31,8 @@ body.dark {
   --shadow: rgba(255, 255, 255, 0.05);
 }
 
-/* Estilos generales del body | General body styles */
+/* ------------------------- */
+/* ESTILOS GENERALES DEL BODY | GENERAL BODY STYLES */
 body {
   margin: 0;
   padding: 0;
@@ -44,14 +47,16 @@ body {
   align-items: center;
 }
 
-/* Botones en la cabecera | Header buttons */
+/* ------------------------- */
+/* BOTONES EN LA CABECERA | HEADER BUTTONS */
 .header-buttons {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-/* Estilos de botones generales | General button styles */
+/* ------------------------- */
+/* BOTONES GENERALES | GENERAL BUTTONS */
 button, .button-login, .button-register, #toggle-view {
   background: var(--button-bg);
   color: var(--button-text);
@@ -67,16 +72,14 @@ button, .button-login, .button-register, #toggle-view {
   margin: 0.5em;
 }
 
-/* Hover para botones */
-button:hover,
-.button-login:hover,
-.button-register:hover,
-#toggle-view:hover {
+/* Efecto hover para botones | Hover effect for buttons */
+button:hover, .button-login:hover, .button-register:hover, #toggle-view:hover {
   transform: scale(1.05);
   background: var(--accent);
 }
 
-/* Contenedor principal | Main container */
+/* ------------------------- */
+/* CONTENEDOR PRINCIPAL | MAIN CONTAINER */
 section {
   width: 100%;
   max-width: 450px;
@@ -87,16 +90,18 @@ section {
   backdrop-filter: blur(10px);
 }
 
-/* Contenedor login y registro | Login and register container */
+/* ------------------------- */
+/* CONTENEDOR LOGIN Y REGISTRO | LOGIN AND REGISTER CONTAINER */
 .conteiner-login-register {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   position: relative;
-  min-height: 300px; /* Para evitar salto de altura al cambiar */
+  min-height: 300px; 
 }
 
-/* Secciones login y register | Login and register sections */
+/* ------------------------- */
+/* SECCIONES LOGIN Y REGISTER | LOGIN AND REGISTER SECTIONS */
 .login, .register {
   opacity: 0;
   pointer-events: none;
@@ -111,24 +116,25 @@ section {
   position: relative;
 }
 
-/* Títulos de las secciones | Section titles */
+/* ------------------------- */
+/* TÍTULOS DE SECCIONES | SECTION TITLES */
 h2 {
   text-align: center;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
-/* Formularios | Form styles */
+/* ------------------------- */
+/* FORMULARIOS | FORMS */
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Inputs */
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+/* ------------------------- */
+/* CAMPOS DE ENTRADA | INPUT FIELDS */
+input[type="text"], input[type="password"], input[type="email"] {
   padding: 0.8em;
   border-radius: 10px;
   border: 1px solid var(--input-border);
@@ -143,15 +149,16 @@ input:focus {
   outline: none;
 }
 
-
-/* Contenedor de botones inferior | Bottom button container */
+/* ------------------------- */
+/* BOTONES INFERIORES | LOWER BUTTONS */
 .buttons {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
 
-/* Campo de contraseña con icono | Password field with icon */
+/* ------------------------- */
+/* CAMPO DE CONTRASEÑA CON ICONO | PASSWORD FIELD WITH ICON */
 .password-field {
   position: relative;
   display: flex;
@@ -160,10 +167,11 @@ input:focus {
 
 .password-field input {
   width: 100%;
-  padding-right: 2.5em; 
+  padding-right: 2.5em;
 }
 
-/* Icono de mostrar contraseña | Show password icon */
+/* ------------------------- */
+/* ICONO DE MOSTRAR CONTRASEÑA | SHOW PASSWORD ICON */
 .toggle-password {
   position: absolute;
   right: 0.8em;
@@ -176,4 +184,72 @@ input:focus {
 
 .toggle-password:hover {
   opacity: 1;
+}
+
+/* ------------------------- */
+/* RESPONSIVE: MÓVILES | MOBILE */
+@media (max-width: 600px) {
+  section {
+    padding: 1.5em;
+  }
+
+  button, .button-login, .button-register, #toggle-view {
+    padding: 0.5em 1em;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ------------------------- */
+/* RESPONSIVE: TABLETAS | TABLETS */
+@media (max-width: 900px) {
+  section {
+    padding: 1.5em;
+  }
+
+  button, .button-login, .button-register, #toggle-view {
+    padding: 0.5em 1em;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ------------------------- */
+/* RESPONSIVE: ESCRITORIOS | DESKTOP */
+@media (min-width: 901px) {
+  section {
+    padding: 2em;
+  }
+
+  button, .button-login, .button-register, #toggle-view {
+    padding: 0.7em 1.5em;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------- */
+/* RESPONSIVE: GRANDES ESCRITORIOS | LARGE DESKTOPS */
+@media (min-width: 1200px) {
+  section {
+    padding: 2.5em;
+  }
+
+  button, .button-login, .button-register, #toggle-view {
+    padding: 0.8em 1.8em;
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
 }
