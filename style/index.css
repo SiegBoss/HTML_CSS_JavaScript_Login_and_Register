@@ -1,0 +1,179 @@
+/* 
+  Modifica los estilos generales para login y registro incluyendo 
+  soporte para modo claro y oscuro, botones, formularios, y campos de contraseña.
+
+
+  Modifies general styles for login and register including support 
+  for light/dark mode, buttons, forms, and password fields.
+*/
+
+/* Variables para modo claro y oscuro | Variables for light and dark mode */
+:root {
+  --bg: #f2f2f2;
+  --text: #1e1e1e;
+  --primary: #6c63ff;
+  --accent: #ff6584;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --button-bg: var(--primary);
+  --button-text: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: #1e1e2f;
+  --text: #f5f5f5;
+  --input-bg: #2c2c3a;
+  --input-border: #444;
+  --button-bg: #7f5af0;
+  --shadow: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos generales del body | General body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botones en la cabecera | Header buttons */
+.header-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Estilos de botones generales | General button styles */
+button, .button-login, .button-register, #toggle-view {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.2s ease, background 0.3s;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5em;
+}
+
+/* Hover para botones */
+button:hover,
+.button-login:hover,
+.button-register:hover,
+#toggle-view:hover {
+  transform: scale(1.05);
+  background: var(--accent);
+}
+
+/* Contenedor principal | Main container */
+section {
+  width: 100%;
+  max-width: 450px;
+  padding: 2em;
+  background: linear-gradient(135deg, var(--bg), var(--input-bg));
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Contenedor login y registro | Login and register container */
+.conteiner-login-register {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  min-height: 300px; /* Para evitar salto de altura al cambiar */
+}
+
+/* Secciones login y register | Login and register sections */
+.login, .register {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.login.active, .register.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Títulos de las secciones | Section titles */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Formularios | Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 0.8em;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+
+/* Contenedor de botones inferior | Bottom button container */
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Campo de contraseña con icono | Password field with icon */
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 2.5em; 
+}
+
+/* Icono de mostrar contraseña | Show password icon */
+.toggle-password {
+  position: absolute;
+  right: 0.8em;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2em;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}

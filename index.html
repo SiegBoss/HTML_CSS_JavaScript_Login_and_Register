@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="SiegBoss" />
+  <meta name="description" content="Portafolio de SiegBoss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login / Register</title>
+  <link rel="icon" type="image/x-icon" href="./images/logo_willy.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/index.css" />
+</head>
+
+<body>
+  <div class="header-buttons">
+    <button id="toggle-dark">Modo Oscuro</button>
+  </div>
+  
+  <section>
+    <div class="conteiner-login-register">
+
+      <!-- Login -->
+      <div class="login active">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+          <input id="login-username" type="text" name="username" placeholder="Usuario" required>
+          <div class="password-field">
+            <input id="login-password" type="password" name="password" placeholder="Contraseña" required>
+            <span class="toggle-password" data-target="login-password">👁️</span>
+          </div>
+          <input id="login-user" class="button-login" type="submit" value="Iniciar Sesión">
+        </form>
+      </div>
+
+      <!-- Register -->
+      <div class="register">
+        <h2>Registrarse</h2>
+        <form id="register-form">
+          <input id="register-username" type="text" name="username" placeholder="Usuario" required>
+          <div class="password-field">
+            <input id="register-password" type="password" name="password" placeholder="Contraseña" required>
+            <span class="toggle-password" data-target="register-password">👁️</span>
+          </div>
+          <input id="register-email" type="email" name="email" placeholder="Email" required>
+          <input id="register-user" class="button-register" type="submit" value="Registrarse">
+        </form>
+      </div>
+      
+    </div>
+  </section>
+  
+  <div class="buttons">
+    <button id="toggle-view">Registrarse</button>
+  </div>
+
+  <script src="./script/index.js"></script>
+</body>
+
+</html>
