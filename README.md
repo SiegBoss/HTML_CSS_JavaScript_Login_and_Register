@@ -1,4 +1,4 @@
-# Sistema de Inicio de Sesión y Registro con Node.js, Express y MongoDB
+# Sistema de Inicio de Sesión y Registro
 
 Este proyecto es un sistema de inicio de sesión y registro.
 Está desarrollada con HTML, CSS y JavaScript.
@@ -27,7 +27,7 @@ Este proyecto sigue la licencia MIT. Consulta el archivo `LICENSE` para obtener 
 ------------------------------
 
 
-# Login and Registration System with Node.js, Express, and MongoDB
+# Login and Registration System
 
 This project is a login and registration system.
 It is developed using HTML, CSS, and JavaScript.
