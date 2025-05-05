@@ -16,6 +16,10 @@ Permite a los usuarios registrarse y luego iniciar sesión a través de una inte
 - CSS  
 - JavaScript
 
+## 🔍 Demostración
+
+Puedes ver una demostración del proyecto en funcionamiento aquí: https://siegboss.github.io/HTML_CSS_JavaScript_Login_and_Register/
+
 ## 📄 Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo [`LICENSE`] para más información.
@@ -39,6 +43,10 @@ It allows users to register and then log in through a simple and intuitive inter
 - HTML  
 - CSS  
 - JavaScript
+
+## 🔍 Demo
+
+Check out a live demo here: https://siegboss.github.io/HTML_CSS_JavaScript_Login_and_Register/
 
 ## 📄 License
 
